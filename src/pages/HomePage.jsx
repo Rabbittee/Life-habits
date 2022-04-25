@@ -5,7 +5,6 @@ import ImgLabel from '../components/ImgLabel';
 import axios from 'axios';
 
 function HomePage() {
-  // const imgId = 'INesDmY';
   const albumId = 'ABDhZzE';
   const [imgLinks, setImgLinks] = useState([]);
 
@@ -18,18 +17,7 @@ function HomePage() {
     };
     return { url, options };
   };
-
-  // async function getImg(id) {
-  //   try {
-  //     const { url, options } = apiOptions(id, 'getImgApi');
-  //     const res = await axios.get(url, options);
-  //     const link = res.data.data.link;
-  //     setImgLinks(link);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // }
-
+  
   async function getAlbum(id) {
     try {
       const { url, options } = apiOptions(id, 'getAlbumApi');
@@ -45,7 +33,6 @@ function HomePage() {
   return (
     <>
       <h1>HomePage is working</h1>
-      {/* <ImgLabel getImg={() => getImg(imgId)} imgLinks={imgLinks} /> */}
       <ImgLabel getImg={() => getAlbum(albumId)} imgLinks={imgLinks} />
     </>
   );
