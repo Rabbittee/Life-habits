@@ -34,6 +34,9 @@ function HomePage() {
     <>
       <h1>HomePage is working</h1>
       <ImgLabel getImg={() => getAlbum(albumId)} imgLinks={imgLinks} />
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
     </>
   );
 }
