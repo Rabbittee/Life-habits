@@ -2,10 +2,12 @@ import imgurApi from '../components/api';
 import { CLIENT_ID } from '../components/utils/Constants';
 import { useState } from 'react';
 import ImgLabel from '../components/ImgLabel';
+import AddImage from '../components/AddImage';
 import axios from 'axios';
 
 function HomePage() {
   // const imgId = 'INesDmY';
+  // const albumId = 'PZijGmD';
   const albumId = 'ABDhZzE';
   const [imgLinks, setImgLinks] = useState([]);
 
@@ -47,6 +49,7 @@ function HomePage() {
       <h1>HomePage is working</h1>
       {/* <ImgLabel getImg={() => getImg(imgId)} imgLinks={imgLinks} /> */}
       <ImgLabel getImg={() => getAlbum(albumId)} imgLinks={imgLinks} />
+      <AddImage />
     </>
   );
 }
