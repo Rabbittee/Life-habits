@@ -1,0 +1,9 @@
+{
+    "cSpell.words": ["imgur"],
+    "editor.formatOnSave": true,
+    "prettier.configPath": ".prettierrc.json",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+}

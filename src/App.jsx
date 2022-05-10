@@ -1,12 +1,7 @@
 import './App.css';
-import HomePage from './pages/HomePage';
+import MainRouter from 'routes/MainRouter';
 
 function App() {
-  return (
-    <div className="App">
-      <h2>Diet and Exercise record</h2>
-      <HomePage />
-    </div>
-  );
+  return <MainRouter />;
 }
 export default App;
