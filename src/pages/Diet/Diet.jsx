@@ -1,10 +1,10 @@
-import imgurApi from '../components/api';
-import { CLIENT_ID } from '../components/utils/Constants';
 import { useState } from 'react';
-import ImgLabel from '../components/ImgLabel';
 import axios from 'axios';
+import imgurApi from 'components/api';
+import { CLIENT_ID } from 'components/utils/Constants';
+import { ImgLabel } from './components';
 
-function HomePage() {
+function Diet() {
   const albumId = 'ABDhZzE';
   const [imgLinks, setImgLinks] = useState([]);
 
@@ -17,7 +17,7 @@ function HomePage() {
     };
     return { url, options };
   };
-  
+
   async function getAlbum(id) {
     try {
       const { url, options } = apiOptions(id, 'getAlbumApi');
@@ -34,11 +34,9 @@ function HomePage() {
     <>
       <h1>HomePage is working</h1>
       <ImgLabel getImg={() => getAlbum(albumId)} imgLinks={imgLinks} />
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
 }
 
-export default HomePage;
+export default Diet;

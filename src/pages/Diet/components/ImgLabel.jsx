@@ -1,4 +1,4 @@
-function ImgLabel({ getImg, imgLinks }) {
+export function ImgLabel({ getImg, imgLinks }) {
   console.log('ImgLabel imgLinks: ', imgLinks);
   return (
     <>
@@ -15,5 +15,3 @@ function ImgLabel({ getImg, imgLinks }) {
     </>
   );
 }
-
-export default ImgLabel;
