@@ -5,6 +5,7 @@ function Home() {
     <>
       <h2>Life Habits Home Page</h2>
       <nav>
+        <Link to="/Login">Login</Link>
         <Link to="/diet">Diet</Link>
         <Link to="/ring-fit">RingFit</Link>
       </nav>
