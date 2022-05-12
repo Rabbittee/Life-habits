@@ -1,2 +1,4 @@
 import Layout from './Layout';
-export { Layout };
+import AccountLayout from './AccountLayout';
+
+export { Layout, AccountLayout };
