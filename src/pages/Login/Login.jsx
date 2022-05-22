@@ -21,7 +21,7 @@ function Login() {
   function handleLogin(event) {
     event.preventDefault();
     console.log('formData: ', formData);
-    checkAccount('test data');
+    checkAccount(formData);
   }
 
   return (

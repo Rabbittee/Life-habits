@@ -7,13 +7,13 @@
         },
         {
             "id": "2",
-            "email": "account02",
-            "password": "password02@example.com"
+            "email": "account02@example.com",
+            "password": "password02"
         },
         {
             "id": "3",
-            "email": "account03",
-            "password": "password03@example.com"
+            "email": "account03@example.com",
+            "password": "password03"
         }
     ]
 }

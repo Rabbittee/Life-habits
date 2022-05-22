@@ -12,12 +12,18 @@ function getData() {
 
 /**
  * 把輸入的登入資料與取得的帳戶資料做比對
- * @param {object} loginData
+ * @param {object} formData
  */
-function checkAccount(loginData) {
+function checkAccount(formData) {
   const account = getData();
-  console.log(loginData);
   console.log('account: ', account);
+
+  account.forEach(item => {
+    if (item.email === formData.email && item.password === formData.password) {
+      console.log('login success');
+    }
+    console.log('login fail');
+  });
 }
 
 /**
