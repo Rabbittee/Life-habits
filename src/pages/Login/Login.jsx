@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import { checkAccount } from 'components/utils/CheckLogin';
 
 function Login() {
+  checkAccount('test data');
+
   return (
     <section>
       <h1>登入</h1>
