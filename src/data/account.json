@@ -2,18 +2,18 @@
     "account": [
         {
             "id": "1",
-            "name": "account01",
+            "email": "account01@example.com",
             "password": "password01"
         },
         {
             "id": "2",
-            "name": "account02",
-            "password": "password02"
+            "email": "account02",
+            "password": "password02@example.com"
         },
         {
             "id": "3",
-            "name": "account03",
-            "password": "password03"
+            "email": "account03",
+            "password": "password03@example.com"
         }
     ]
 }
