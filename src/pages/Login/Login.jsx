@@ -3,8 +3,6 @@ import { checkAccount } from 'components/utils/CheckLogin';
 import { useState } from 'react';
 
 function Login() {
-  checkAccount('test data');
-
   const initialFormData = {
     email: '',
     password: '',
@@ -23,28 +21,46 @@ function Login() {
   function handleLogin(event) {
     event.preventDefault();
     console.log('formData: ', formData);
+    checkAccount('test data');
   }
 
   return (
-    <section>
+    <section className="flex flex-col gap-2 items-center">
       <h1>登入</h1>
-      <form action="submit" onSubmit={handleLogin}>
-        <label>
+      <form action="submit" onSubmit={handleLogin} className="flex flex-col">
+        <label className="bg-blue-400 p-4">
           <p>信箱</p>
-          <input type="email" name="email" onChange={handleChange} />
+          <input
+            className="border border-pink-300"
+            type="email"
+            name="email"
+            onChange={handleChange}
+          />
+        </label>
+
+        <label className="bg-blue-300 p-4">
+          <p>account</p>
+          <input
+            className="border border-pink-300"
+            type="password"
+            name="password"
+            onChange={handleChange}
+          />
         </label>
 
         <label>
-          <p>密碼</p>
-          <input type="password" name="password" onChange={handleChange} />
-        </label>
-
-        <label>
-          <input type="button" value="登入" onClick={handleLogin} />
+          <input
+            className="px-2 py-1 border border-green-700 bg-green-200"
+            type="button"
+            value="登入"
+            onClick={handleLogin}
+          />
         </label>
       </form>
-      <p>還沒有帳號嗎？</p>
-      <Link to="/account/sign-up">註冊</Link>
+      <div>
+        <p>還沒有帳號嗎？</p>
+        <Link to="/account/sign-up">註冊</Link>
+      </div>
     </section>
   );
 }
