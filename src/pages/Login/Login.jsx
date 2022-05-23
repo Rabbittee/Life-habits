@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { checkAccount } from 'components/utils/CheckLogin';
+import { checkAccount } from 'components/utils/LoginValidation';
 import { useState } from 'react';
 
 function Login() {
