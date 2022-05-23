@@ -3,6 +3,7 @@ import axios from 'axios';
 import imgurApi from 'components/api';
 import { CLIENT_ID } from 'components/utils/Constants';
 import { ImgLabel } from './components';
+import { AddImage } from './components/AddImage';
 
 function Diet() {
   const albumId = 'ABDhZzE';
@@ -34,6 +35,7 @@ function Diet() {
     <>
       <h1>HomePage is working</h1>
       <ImgLabel getImg={() => getAlbum(albumId)} imgLinks={imgLinks} />
+      <AddImage />
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
     </>
   );
