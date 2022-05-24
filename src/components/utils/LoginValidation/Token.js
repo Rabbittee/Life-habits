@@ -1,9 +1,11 @@
-/**
- * 建立 token
- */
 function createToken() {
   console.log('create token');
-  //   localStorage.setItem('token', '123456789');
+  localStorage.setItem('token', '123456789');
+}
+
+function removeToken() {
+  console.log('remove token');
+  localStorage.removeItem('token');
 }
 
 /**
@@ -12,8 +14,11 @@ function createToken() {
  *  - 如果 token 有值，則繼續執行
  */
 function checkToken() {
-  //   console.log('token exist or not: ', localStorage.getItem('token'));
-  console.log('token not exist');
+  const getToken = localStorage.getItem('token');
+  console.log('token exist or not: ', getToken);
+  console.log(getToken);
+
+  return Boolean(getToken);
 }
 
-export { createToken, checkToken };
+export { createToken, removeToken, checkToken };

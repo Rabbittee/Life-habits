@@ -4,7 +4,7 @@ function Layout() {
   return (
     <>
       <header>
-        <title>Account Settings</title>
+        <h1>Account Settings</h1>
       </header>
       <main>
         <p>Welcome to Life Habits</p>

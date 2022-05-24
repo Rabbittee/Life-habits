@@ -1,6 +1,11 @@
 {
     "account": [
         {
+            "id": "0",
+            "email": "test@example.com",
+            "password": "test"
+        },
+        {
             "id": "1",
             "email": "account01@example.com",
             "password": "password01"

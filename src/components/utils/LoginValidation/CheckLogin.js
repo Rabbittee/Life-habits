@@ -13,16 +13,7 @@ async function checkAccount(formData) {
     return item.email === formData.email && item.password === formData.password;
   });
 
-  if (loginSuccess) {
-    console.log('login success');
-    // TODO: 跳轉至 home 頁面
-  } else {
-    console.log('login fail');
-    // TODO: 跳轉回登入頁面
-  }
+  return loginSuccess;
 }
 
 export { checkAccount };
-
-// TODO:  login input data
-// TODO: check token is exist, correct

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { checkAccount } from 'components/utils/LoginValidation';
+import { checkAccount, createToken } from 'components/utils/LoginValidation';
 import { useState } from 'react';
 
 function Login() {
@@ -20,8 +20,16 @@ function Login() {
 
   function handleLogin(event) {
     event.preventDefault();
+
     console.log('formData: ', formData);
-    checkAccount(formData);
+    const loginSuccess = checkAccount(formData);
+
+    if (loginSuccess) {
+      console.log('login success');
+      createToken();
+    } else {
+      console.log('login fail');
+    }
   }
 
   return (
