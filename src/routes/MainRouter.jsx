@@ -12,6 +12,7 @@ function MainRouter() {
         {/* Logged in */}
         <Route path="/" element={<Layout />}>
           <Route index element={hasToken ? <Home /> : <Navigate replace to="/account/login" />} />
+          <Route path="home" element={<Home />} />
           <Route path="diet" element={<Diet />} />
           <Route path="ring-fit" element={<RingFit />} />
         </Route>

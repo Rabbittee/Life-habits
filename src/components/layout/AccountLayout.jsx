@@ -1,8 +1,13 @@
 import { Outlet } from 'react-router-dom';
+import { AccountNav, MainNav } from './components';
 
 function Layout() {
   return (
     <>
+      <MainNav />
+
+      <AccountNav />
+
       <header>
         <h1>Account Settings</h1>
       </header>
