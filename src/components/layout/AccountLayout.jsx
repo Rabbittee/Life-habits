@@ -1,11 +1,16 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
+import { Header, AccountNav, MainNav } from './components';
 
 function Layout() {
+  const location = useLocation();
+
   return (
     <>
-      <header>
-        <title>Account Settings</title>
-      </header>
+      <Header pathName={location.pathname} />
+
+      <MainNav />
+
+      <AccountNav />
       <main>
         <p>Welcome to Life Habits</p>
         <Outlet />
