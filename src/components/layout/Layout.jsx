@@ -1,10 +1,12 @@
 import { Header, Footer, MainNav } from './components';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation } from 'react-router-dom';
 
 function Layout() {
+  const location = useLocation();
+
   return (
     <>
-      <Header />
+      <Header pathName={location.pathname} />
       <MainNav />
       <main>
         <Outlet />

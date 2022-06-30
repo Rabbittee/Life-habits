@@ -1,6 +1,8 @@
+import { imgurImageUrl, imgurAlbumUrl } from 'constant';
+
 export default function imgurApi(query) {
   return {
-    getImgApi: () => `https://api.imgur.com/3/image/${query}`,
-    getAlbumApi: () => `https://api.imgur.com/3/album/${query}`,
+    getImgApi: () => `${imgurImageUrl}${query}`,
+    getAlbumApi: () => `${imgurAlbumUrl}${query}`,
   };
 }
